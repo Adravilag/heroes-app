@@ -25,7 +25,7 @@ export const useDebounce = <T>(
 };
 
 // Hook alternativo para debounce con callback
-export const useDebouncedCallback = <T extends (...args: any[]) => any>(
+export const useDebouncedCallback = <T extends (...args: string[]) => void>(
   callback: T,
   delay: number = 300
 ): T => {

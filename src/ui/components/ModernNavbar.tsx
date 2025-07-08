@@ -89,7 +89,7 @@ const ModernNavbar = () => {
                 </svg>
               </div>
               <div className="user-info">
-                <span className="user-name">{user?.name || "Usuario"}</span>
+                <span className="user-name">{user?.name || user?.username || "Usuario"}</span>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                   <path d="M6 8L2 4h8l-4 4z"/>
                 </svg>

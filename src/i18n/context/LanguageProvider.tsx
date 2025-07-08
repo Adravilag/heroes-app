@@ -1,23 +1,6 @@
-import { createContext, useContext } from 'react';
 import type { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-
-interface LanguageContextType {
-  currentLanguage: string;
-  changeLanguage: (language: string) => void;
-  t: (key: string, options?: any) => string;
-  availableLanguages: { code: string; name: string; nativeName: string }[];
-}
-
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-export const useLanguage = () => {
-  const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
-  }
-  return context;
-};
+import { LanguageContext } from './LanguageContext';
 
 interface LanguageProviderProps {
   children: ReactNode;
@@ -36,7 +19,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   };
 
   // Enhanced t function with better interpolation support
-  const tWithInterpolation = (key: string, options?: any): string => {
+  const tWithInterpolation = (key: string, options?: { [key: string]: string | number | boolean }): string => {
     try {
       const result = t(key, options);
       console.log(`Translation: ${key} with options:`, options, '→', result);
@@ -60,3 +43,5 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     </LanguageContext.Provider>
   );
 };
+
+export default LanguageProvider;

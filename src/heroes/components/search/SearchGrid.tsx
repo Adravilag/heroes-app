@@ -1,8 +1,8 @@
-import type { Hero } from "../../types/Hero";
+import type { TranslatedHero } from "../../hooks/useTranslatedHeroes";
 
 type SearchGridProps = {
-  filteredHeroes: Hero[];
-  onHeroSelect: (hero: Hero) => void;
+  filteredHeroes: TranslatedHero[];
+  onHeroSelect: (hero: TranslatedHero) => void;
   searchTerm: string;
   selectedRole: string;
   selectedUniverse: string;

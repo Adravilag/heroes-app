@@ -1,4 +1,5 @@
-export { LanguageProvider, useLanguage } from './context/LanguageContext';
+export { LanguageProvider } from './context/LanguageProvider';
+export { useLanguage } from './hooks/useLanguage';
 export { default as LanguageSelector } from './components/LanguageSelector';
 export { default as ModernLanguageSelector } from './components/ModernLanguageSelector';
 export { default as useTranslation } from './hooks/useTranslation';

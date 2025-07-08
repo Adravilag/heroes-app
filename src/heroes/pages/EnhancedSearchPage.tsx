@@ -3,6 +3,7 @@ import { useEnhancedSearchPage } from "../hooks/useEnhancedSearchPage";
 import HeroModal from "../components/heroes/HeroModal";
 import SearchControls from "../components/search/SearchControls";
 import SearchGrid from "../components/search/SearchGrid";
+import { type TranslatedHero } from "../hooks/useTranslatedHeroes";
 
 const EnhancedSearchPage: React.FC = () => {
   const {
@@ -60,7 +61,7 @@ const EnhancedSearchPage: React.FC = () => {
         {/* Search Grid */}
         <SearchGrid
           filteredHeroes={searchGrid.currentPageHeroes}
-          onHeroSelect={(hero: any) => {
+          onHeroSelect={(hero: TranslatedHero) => {
             const heroProps = searchGrid.getHeroProps(hero, 0);
             heroProps.onClick();
           }}

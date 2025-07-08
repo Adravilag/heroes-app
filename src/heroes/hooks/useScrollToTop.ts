@@ -142,7 +142,7 @@ export const useScrollToTopOnDependency = (
     if (dependencies.length > 0) {
       scrollToTop();
     }
-  }, dependencies);
+  }, [dependencies.length, scrollToTop]);
 
   return { scrollToTop };
 };

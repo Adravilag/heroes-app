@@ -1,11 +1,8 @@
 import { useReducer } from "react";
-import { AuthContext } from "./AuthContext";
-import { authReducer } from "./authReducer";
+import { AuthContext, type User } from "./AuthContext";
+import { authReducer, type AuthState as AuthReducerState } from "./authReducer";
 
-type AuthState = {
-  isAuthenticated: boolean;
-  user: any;
-};
+type AuthState = AuthReducerState;
 
 const init = (initialState: AuthState): AuthState => {
   const user = localStorage.getItem("user");
@@ -26,11 +23,11 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
     {
       isAuthenticated: false,
       user: null,
-    } as AuthState,
+    },
     init
   );
 
-  const onLoginUser = (user: any) => {
+  const onLoginUser = (user: User) => {
     localStorage.setItem("user", JSON.stringify(user));
     dispatch({ type: "LOGIN", payload: user });
   };

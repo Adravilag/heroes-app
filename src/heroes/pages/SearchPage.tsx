@@ -5,6 +5,7 @@ import HeroModal from "../components/heroes/HeroModal";
 import SearchControls from "../components/search/SearchControls";
 import SearchGrid from "../components/search/SearchGrid";
 import PaginationControls from "../components/pagination/PaginationControls";
+import { type TranslatedHero } from "../hooks/useTranslatedHeroes";
 
 const SearchPage = () => {
   // Scroll automático al top cuando se navega a esta página
@@ -57,7 +58,7 @@ const SearchPage = () => {
         {/* Grid de héroes con Bootstrap */}
         <SearchGrid
           filteredHeroes={searchGrid.currentPageHeroes}
-          onHeroSelect={(hero: any) => {
+          onHeroSelect={(hero: TranslatedHero) => {
             const heroProps = searchGrid.getHeroProps(hero, 0);
             heroProps.onClick();
           }}

@@ -79,7 +79,7 @@ const Navbar = () => {
 
         <div className="hots-user-section">
           <span className="hots-user-name">
-            {user?.name || ""}
+            {user?.name || user?.username || ""}
           </span>
           <LanguageSelector />
           <button className="hots-logout-btn" onClick={handleLogout}>

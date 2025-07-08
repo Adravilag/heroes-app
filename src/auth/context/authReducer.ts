@@ -1,8 +1,14 @@
 import { types } from "../types/types";
+import { type User } from "./AuthContext";
 
 export type AuthAction = {
   type: string;
-  payload: any;
+  payload: User | null;
+};
+
+export type AuthState = {
+  isAuthenticated: boolean;
+  user: User | null;
 };
 
 export const Action = {
@@ -11,9 +17,9 @@ export const Action = {
 } as const;
 
 export const authReducer = (
-  state = { isAuthenticated: false, user: null },
-  action = { type: "", payload: null }
-) => {
+  state: AuthState = { isAuthenticated: false, user: null },
+  action: AuthAction = { type: "", payload: null }
+): AuthState => {
   switch (action.type) {
     case Action.login:
       return {

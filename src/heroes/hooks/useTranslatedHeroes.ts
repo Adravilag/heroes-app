@@ -67,7 +67,6 @@ export const useTranslatedHeroes = () => {
     translateMobility,
     translateHeroName,
     translateHeroDescription,
-    currentLanguage
   ]);
 
   return {

@@ -39,8 +39,11 @@ export const useEnhancedSearchPage = (options: UseEnhancedSearchPageOptions = {}
   // Selected hero state
   const [selectedHero, setSelectedHero] = useState<TranslatedHero | null>(null);
 
-  // Core search functionality with optional persistence
-  const searchHook = persistFilters ? usePersistedSearchFilters() : useHeroSearch();
+  // Always call both hooks, use the appropriate one based on config
+  const persistedSearch = usePersistedSearchFilters();
+  const regularSearch = useHeroSearch();
+  const searchHook = persistFilters ? persistedSearch : regularSearch;
+
   const {
     searchTerm,
     setSearchTerm,
@@ -57,8 +60,10 @@ export const useEnhancedSearchPage = (options: UseEnhancedSearchPageOptions = {}
   // Debounced search term
   const debouncedSearchTerm = useDebounce(searchTerm, { delay: debounceDelay });
 
-  // All heroes data (sync or async)
-  const heroesHook = enableAsyncLoading ? useAllHeroesAsync() : useAllHeroes();
+  // Always call both hooks, use the appropriate one based on config
+  const asyncHeroes = useAllHeroesAsync();
+  const syncHeroes = useAllHeroes();
+  const heroesHook = enableAsyncLoading ? asyncHeroes : syncHeroes;
   const { allHeroes, uniqueUniverses, uniqueRoles } = heroesHook;
 
   // Hero statistics

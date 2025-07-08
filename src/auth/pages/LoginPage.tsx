@@ -16,7 +16,7 @@ const LoginPage = () => {
 
     login({
       id: '1',
-      name: '@Adravilag',
+      username: '@Adravilag',
     });
 
     // Redirigir a la página desde la cual vino el usuario o a la página principal

@@ -5,7 +5,7 @@ import {
   getMobilityIcon,
   getDifficultyClass,
 } from "../../helpers";
-import { useLanguage } from "../../../i18n/context/LanguageContext";
+import { useLanguage } from "../../../i18n/i18n";
 import type { TranslatedHero } from "../../hooks/useTranslatedHeroes";
 
 const HeroDetails = ({
