@@ -1,0 +1,245 @@
+{
+  "auth": {
+    "login": {
+      "title": "Nexus Login",
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Enter the Nexus",
+      "invalidCredentials": "Invalid username or password",
+      "required": "This field is required",
+      "welcome": "Welcome to the battlefield",
+      "subtitle": "Join the epic battle"
+    },
+    "logout": "Logout"
+  },
+  "heroes": {
+    "title": "Heroes of the Nexus",
+    "search": "Search hero...",
+    "searchPlaceholder": "Search heroes...",
+    "noResults": "No heroes found",
+    "noResultsMessage": "No heroes match your search criteria",
+    "goBack": "Go back",
+    "publisher": "Publisher",
+    "firstAppearance": "First appearance",
+    "characters": "Characters",
+    "abilities": "Abilities",
+    "biography": "Biography",
+    "totalHeroes": "Total heroes",
+    "filteredHeroes": "Filtered heroes",
+    "allRoles": "All roles",
+    "allUniverses": "All universes",
+    "clearFilters": "Clear filters",
+    "role": "Role",
+    "universe": "Universe",
+    "health": "Health",
+    "mana": "Mana",
+    "attack": "Attack",
+    "difficulty": "Difficulty",
+    "type": "Type",
+    "franchise": "Franchise",
+    "releaseDate": "Release date",
+    "viewDetails": "View details",
+    "closeModal": "Close modal",
+    "heroStats": "Hero stats",
+    "heroAbilities": "Hero abilities",
+    "heroNotFound": "Hero Not Found",
+    "heroNotFoundMessage": "The hero you're looking for doesn't exist in the Nexus.",
+    "backToHeroesList": "Back to Heroes List",
+    "basicInformation": "Basic Information",
+    "combatStats": "Combat Stats",
+    "damage": "Damage",
+    "mobility": "Mobility",
+    "aboutHero": "About Hero",
+    "heroDescription": "This legendary hero from the {{universe}} universe brings unique abilities to the battlefield.",
+    "goBackButton": "Go Back"
+  },
+  "universes": {
+    "warcraft": "Warcraft",
+    "starcraft": "Starcraft",
+    "diablo": "Diablo",
+    "overwatch": "Overwatch",
+    "classic": "Classic",
+    "nexus": "Nexus"
+  },
+  "roles": {
+    "tank": "Tank",
+    "healer": "Healer",
+    "bruiser": "Bruiser",
+    "melee": "Melee Assassin",
+    "ranged": "Ranged Assassin",
+    "support": "Support",
+    "specialist": "Specialist",
+    "multiclass": "Multiclass"
+  },
+  "damageTypes": {
+    "Physical": "Physical",
+    "Magical": "Magical",
+    "Mixed": "Mixed"
+  },
+  "healthTypes": {
+    "Low": "Low",
+    "Medium": "Medium",
+    "High": "High",
+    "Very High": "Very High"
+  },
+  "mobilityTypes": {
+    "Low": "Low",
+    "Medium": "Medium",
+    "High": "High",
+    "Very High": "Very High"
+  },
+  "pages": {
+    "home": {
+      "title": "Heroes of the Storm",
+      "subtitle": "Choose your hero and enter the Nexus",
+      "description": "Explore the multiverse of Blizzard heroes"
+    },
+    "search": {
+      "title": "Hero Search",
+      "subtitle": "Find your perfect hero",
+      "description": "Search and filter through all available heroes"
+    },
+    "warcraft": {
+      "title": "Warcraft Heroes",
+      "subtitle": "Heroes from Azeroth",
+      "description": "Discover the champions of the Warcraft universe"
+    },
+    "starcraft": {
+      "title": "StarCraft Heroes",
+      "subtitle": "Warriors of the Koprulu Sector",
+      "description": "Meet the heroes from the StarCraft universe"
+    },
+    "diablo": {
+      "title": "Diablo Heroes",
+      "subtitle": "Champions against the Burning Hells",
+      "description": "Heroes who face the forces of darkness"
+    },
+    "overwatch": {
+      "title": "Overwatch Heroes",
+      "subtitle": "Heroes of tomorrow",
+      "description": "The champions of the Overwatch universe"
+    }
+  },
+  "pagination": {
+    "first": "First",
+    "previous": "Previous",
+    "next": "Next",
+    "last": "Last",
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "to": "to",
+    "entries": "entries",
+    "results": "results"
+  },
+  "navigation": {
+    "home": "Home",
+    "search": "Search",
+    "warcraft": "Warcraft",
+    "starcraft": "Starcraft",
+    "diablo": "Diablo",
+    "overwatch": "Overwatch"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "select": "Select",
+    "all": "All",
+    "none": "None",
+    "more": "More",
+    "less": "Less",
+    "back": "Back",
+    "continue": "Continue",
+    "finish": "Finish",
+    "reset": "Reset",
+    "apply": "Apply",
+    "filter": "Filter",
+    "sort": "Sort",
+    "sortBy": "Sort by",
+    "orderBy": "Order by",
+    "ascending": "Ascending",
+    "descending": "Descending",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "veryEasy": "Very Easy",
+    "veryHard": "Very Hard",
+    "information": "Information",
+    "shop": "Shop",
+    "download": "Download Battle.net",
+    "about": "About"
+  },
+  "language": {
+    "select": "Select language",
+    "english": "English",
+    "spanish": "Spanish"
+  },
+  "tooltips": {
+    "searchHero": "Search for a hero by name",
+    "filterByRole": "Filter heroes by role",
+    "filterByUniverse": "Filter heroes by universe",
+    "clearAllFilters": "Clear all active filters",
+    "viewHeroDetails": "View detailed hero information",
+    "closeDetails": "Close hero details",
+    "nextPage": "Go to next page",
+    "previousPage": "Go to previous page",
+    "firstPage": "Go to first page",
+    "lastPage": "Go to last page",
+    "noHeroesFound": "No heroes found in the {{universe}} universe",
+    "noHeroesFoundDescription": "Please check back later or explore other universes.",
+    "heroesTitle": "{{universe}} Heroes",
+    "heroesSubtitle": "Discover legendary champions from the {{universe}} universe",
+    "viewDetails": "View Details",
+    "firstAppeared": "First appeared:",
+    "difficulty": "Difficulty",
+    "damageType": "Damage Type",
+    "range": "Range",
+    "health": "Health",
+    "mobility": "Mobility",
+    "description": "Description",
+    "firstAppearance": "First Appearance"
+  },
+  "ui": {
+    "viewDetails": "View Details",
+    "firstAppeared": "First appeared:",
+    "noHeroesFound": "No heroes found in the {{universe}} universe",
+    "noHeroesFoundDescription": "Please check back later or explore other universes.",
+    "heroesTitle": "{{universe}} Heroes",
+    "heroesSubtitle": "Discover legendary champions from the {{universe}} universe",
+    "description": "Description"
+  },
+  "heroData": {
+    "note": "Hero names, descriptions, and attributes are loaded from heroes-en.json"
+  },
+  "footer": {
+    "brand": "Heroes of the Nexus",
+    "description": "Join the epic battle where legendary heroes from Blizzard's universes clash in the ultimate battlefield.",
+    "universes": "Universes",
+    "community": "Community",
+    "resources": "Resources",
+    "searchHeroes": "Search Heroes",
+    "guides": "Guides",
+    "builds": "Builds",
+    "tierLists": "Tier Lists",
+    "patches": "Patches",
+    "followUs": "Follow Us",
+    "copyright": "All rights reserved.",
+    "disclaimer": "Heroes of the Storm is a registered trademark of Blizzard Entertainment, Inc.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies"
+  },
+  "difficulty": {
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "veryhard": "Very Hard"
+  }
+}

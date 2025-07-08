@@ -1,0 +1,425 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  padding: 2rem;
+  position: relative;
+}
+
+.language-selector-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-selector-container .language-select {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-selector-container .language-select:hover {
+  border-color: rgba(251, 191, 36, 0.6);
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.language-selector-container .language-select:focus {
+  outline: none;
+  border-color: rgba(251, 191, 36, 0.8);
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.25);
+}
+
+.language-selector-container .language-select option {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px;
+}
+
+.login-card {
+  background: var(--hots-navbar-gradient);
+  backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 60px rgba(251, 191, 36, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  animation: float 8s ease-in-out infinite alternate, fadeIn 1s ease-out;
+}
+
+.login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(251, 191, 36, 0.08) 0%, 
+    rgba(37, 99, 235, 0.08) 50%, 
+    rgba(139, 92, 246, 0.08) 100%);
+  animation: shimmer 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Héroe Orb */
+.login-hero-icon {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nexus-orb {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulseOrb 3s ease-in-out infinite;
+}
+
+.orb-core {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, 
+    rgba(251, 191, 36, 0.9) 0%, 
+    rgba(37, 99, 235, 0.7) 50%, 
+    rgba(139, 92, 246, 0.8) 100%);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 
+    0 0 20px rgba(251, 191, 36, 0.6),
+    0 0 40px rgba(37, 99, 235, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
+  animation: coreRotate 4s linear infinite;
+}
+
+.orb-ring {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgba(251, 191, 36, 0.5);
+  border-radius: 50%;
+  position: absolute;
+  border-top: 2px solid rgba(37, 99, 235, 0.8);
+  border-right: 2px solid rgba(139, 92, 246, 0.8);
+  animation: ringRotate 6s linear infinite reverse;
+}
+
+.orb-glow {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(circle, 
+    rgba(251, 191, 36, 0.2) 0%, 
+    rgba(37, 99, 235, 0.1) 50%, 
+    transparent 70%);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.login-content {
+  position: relative;
+  z-index: 1;
+}
+
+.login-title {
+  margin-bottom: 1.5rem;
+}
+
+.login-subtitle {
+  margin-bottom: 3rem;
+  color: var(--hots-light);
+  opacity: 0.9;
+}
+
+.login-subtitle p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, 
+    var(--hots-gold), 
+    var(--hots-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle-small {
+  font-size: 0.9rem !important;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.login-form {
+  margin-bottom: 2rem;
+}
+
+.login-button {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--hots-light);
+  text-decoration: none;
+  padding: 1.25rem 3rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, 
+    var(--hots-blue), 
+    var(--hots-purple), 
+    var(--hots-gold));
+  border: 2px solid rgba(248, 250, 252, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(15px);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.4),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  min-width: 250px;
+  animation: buttonGlow 2s ease-in-out infinite alternate;
+}
+
+.login-button:hover {
+  transform: translateY(-4px) scale(1.08);
+  box-shadow: 
+    0 12px 35px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(37, 99, 235, 0.5),
+    0 0 60px rgba(251, 191, 36, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.login-button:active {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.button-text {
+  position: relative;
+  z-index: 2;
+}
+
+.button-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(251, 191, 36, 0.8);
+  border-radius: 50%;
+  animation: particleFloat 3s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+  top: 60%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+  bottom: 25%;
+  left: 70%;
+  animation-delay: 2s;
+}
+
+.login-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.4), 
+    transparent);
+  transition: left 1s ease;
+  z-index: 1;
+}
+
+.login-button:hover::before {
+  left: 150%;
+}
+
+.login-footer {
+  margin-top: 2rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--hots-light);
+}
+
+.blizzard-logo {
+  font-weight: bold;
+  background: linear-gradient(135deg, 
+    var(--hots-blue), 
+    var(--hots-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulseOrb {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes coreRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ringRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes buttonGlow {
+  0% {
+    box-shadow: 
+      0 6px 20px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(139, 92, 246, 0.4),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 
+      0 6px 20px rgba(0, 0, 0, 0.3),
+      0 0 35px rgba(251, 191, 36, 0.5),
+      inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 3rem 2rem;
+    margin: 1rem;
+  }
+  
+  .nexus-orb {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .orb-core {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .orb-ring {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .orb-glow {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .login-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    min-width: 200px;
+  }
+}

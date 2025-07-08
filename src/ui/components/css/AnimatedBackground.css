@@ -1,0 +1,275 @@
+.animated-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+  overflow: hidden;
+}
+
+/* Ondas de energía */
+.energy-waves {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.wave {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid rgba(251, 191, 36, 0.1);
+  animation: energy-pulse 8s ease-in-out infinite;
+}
+
+.wave-1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.wave-2 {
+  width: 500px;
+  height: 500px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+.wave-3 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation-delay: 4s;
+  border-color: rgba(139, 92, 246, 0.1);
+}
+
+@keyframes energy-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* Círculos mágicos */
+.magic-circles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.magic-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(251, 191, 36, 0.1),
+    transparent,
+    rgba(251, 191, 36, 0.1),
+    transparent
+  );
+  animation: magic-rotate 20s linear infinite;
+}
+
+.circle-1 {
+  width: 200px;
+  height: 200px;
+  top: 30%;
+  right: 20%;
+  animation-duration: 15s;
+}
+
+.circle-2 {
+  width: 150px;
+  height: 150px;
+  bottom: 30%;
+  left: 20%;
+  animation-duration: 25s;
+  animation-direction: reverse;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent
+  );
+}
+
+.circle-3 {
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-duration: 30s;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent
+  );
+}
+
+@keyframes magic-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Rayos de luz */
+.light-rays {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.ray {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(251, 191, 36, 0.05),
+    transparent
+  );
+  transform-origin: left center;
+  animation: ray-sweep 12s ease-in-out infinite;
+}
+
+.ray-1 {
+  width: 200%;
+  height: 2px;
+  top: 25%;
+  left: -100%;
+  animation-delay: 0s;
+}
+
+.ray-2 {
+  width: 200%;
+  height: 1px;
+  top: 50%;
+  left: -100%;
+  animation-delay: 3s;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.05),
+    transparent
+  );
+}
+
+.ray-3 {
+  width: 200%;
+  height: 3px;
+  top: 75%;
+  left: -100%;
+  animation-delay: 6s;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(139, 92, 246, 0.05),
+    transparent
+  );
+}
+
+.ray-4 {
+  width: 200%;
+  height: 1px;
+  top: 10%;
+  left: -100%;
+  animation-delay: 9s;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.05),
+    transparent
+  );
+}
+
+@keyframes ray-sweep {
+  0%, 20% {
+    transform: translateX(0) rotate(-5deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80%, 100% {
+    transform: translateX(100vw) rotate(5deg);
+    opacity: 0;
+  }
+}
+
+/* Nebulosa */
+.nebula {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.nebula-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(251, 191, 36, 0.02) 0%,
+    transparent 70%
+  );
+  animation: nebula-drift 30s ease-in-out infinite;
+}
+
+.layer-1 {
+  animation-duration: 25s;
+  background: radial-gradient(
+    ellipse 80% 60% at 20% 30%,
+    rgba(251, 191, 36, 0.03) 0%,
+    transparent 70%
+  );
+}
+
+.layer-2 {
+  animation-duration: 35s;
+  animation-direction: reverse;
+  background: radial-gradient(
+    ellipse 60% 80% at 80% 70%,
+    rgba(59, 130, 246, 0.02) 0%,
+    transparent 70%
+  );
+}
+
+.layer-3 {
+  animation-duration: 40s;
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 80%,
+    rgba(139, 92, 246, 0.02) 0%,
+    transparent 70%
+  );
+}
+
+@keyframes nebula-drift {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.8;
+  }
+}

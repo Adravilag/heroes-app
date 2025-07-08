@@ -1,0 +1,245 @@
+{
+  "auth": {
+    "login": {
+      "title": "Acceso al Nexus",
+      "username": "Nombre de usuario",
+      "password": "Contraseña",
+      "loginButton": "Entrar al Nexus",
+      "invalidCredentials": "Nombre de usuario o contraseña incorrectos",
+      "required": "Este campo es requerido",
+      "welcome": "Bienvenido al campo de batalla",
+      "subtitle": "Únete a la batalla épica"
+    },
+    "logout": "Cerrar sesión"
+  },
+  "heroes": {
+    "title": "Héroes del Nexus",
+    "search": "Buscar héroe...",
+    "searchPlaceholder": "Buscar héroes...",
+    "noResults": "No se encontraron héroes",
+    "noResultsMessage": "No hay héroes que coincidan con tus criterios de búsqueda",
+    "goBack": "Regresar",
+    "publisher": "Editorial",
+    "firstAppearance": "Primera aparición",
+    "characters": "Personajes",
+    "abilities": "Habilidades",
+    "biography": "Biografía",
+    "totalHeroes": "Total de héroes",
+    "filteredHeroes": "Héroes filtrados",
+    "allRoles": "Todos los roles",
+    "allUniverses": "Todos los universos",
+    "clearFilters": "Limpiar filtros",
+    "role": "Rol",
+    "universe": "Universo",
+    "health": "Salud",
+    "mana": "Maná",
+    "attack": "Ataque",
+    "difficulty": "Dificultad",
+    "type": "Tipo",
+    "franchise": "Franquicia",
+    "releaseDate": "Fecha de lanzamiento",
+    "viewDetails": "Ver detalles",
+    "closeModal": "Cerrar modal",
+    "heroStats": "Estadísticas del héroe",
+    "heroAbilities": "Habilidades del héroe",
+    "heroNotFound": "Héroe No Encontrado",
+    "heroNotFoundMessage": "El héroe que buscas no existe en el Nexo.",
+    "backToHeroesList": "Volver a la Lista de Héroes",
+    "basicInformation": "Información Básica",
+    "combatStats": "Estadísticas de Combate",
+    "damage": "Daño",
+    "mobility": "Movilidad",
+    "aboutHero": "Acerca del Héroe",
+    "heroDescription": "Este héroe legendario del universo {{universe}} trae habilidades únicas al campo de batalla.",
+    "goBackButton": "Volver Atrás"
+  },
+  "universes": {
+    "warcraft": "Warcraft",
+    "starcraft": "Starcraft",
+    "diablo": "Diablo",
+    "overwatch": "Overwatch",
+    "classic": "Clásico",
+    "nexus": "Nexus"
+  },
+  "roles": {
+    "tank": "Tanque",
+    "healer": "Sanador",
+    "bruiser": "Luchador",
+    "melee": "Asesino Cuerpo a Cuerpo",
+    "ranged": "Asesino a Distancia",
+    "support": "Apoyo",
+    "specialist": "Especialista",
+    "multiclass": "Multiclase"
+  },
+  "damageTypes": {
+    "Physical": "Físico",
+    "Magical": "Mágico",
+    "Mixed": "Mixto"
+  },
+  "healthTypes": {
+    "Low": "Baja",
+    "Medium": "Media",
+    "High": "Alta",
+    "Very High": "Muy Alta"
+  },
+  "mobilityTypes": {
+    "Low": "Baja",
+    "Medium": "Media",
+    "High": "Alta",
+    "Very High": "Muy Alta"
+  },
+  "pages": {
+    "home": {
+      "title": "Héroes de la Tormenta",
+      "subtitle": "Elige tu héroe y entra al Nexus",
+      "description": "Explora el multiverso de héroes de Blizzard"
+    },
+    "search": {
+      "title": "Búsqueda de Héroes",
+      "subtitle": "Encuentra tu héroe perfecto",
+      "description": "Busca y filtra entre todos los héroes disponibles"
+    },
+    "warcraft": {
+      "title": "Héroes de Warcraft",
+      "subtitle": "Héroes de Azeroth",
+      "description": "Descubre a los campeones del universo de Warcraft"
+    },
+    "starcraft": {
+      "title": "Héroes de StarCraft",
+      "subtitle": "Guerreros del Sector Koprulu",
+      "description": "Conoce a los héroes del universo de StarCraft"
+    },
+    "diablo": {
+      "title": "Héroes de Diablo",
+      "subtitle": "Campeones contra los Infiernos Ardientes",
+      "description": "Héroes que enfrentan las fuerzas de la oscuridad"
+    },
+    "overwatch": {
+      "title": "Héroes de Overwatch",
+      "subtitle": "Héroes del mañana",
+      "description": "Los campeones del universo de Overwatch"
+    }
+  },
+  "pagination": {
+    "first": "Primero",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "last": "Último",
+    "page": "Página",
+    "of": "de",
+    "showing": "Mostrando",
+    "to": "a",
+    "entries": "entradas",
+    "results": "resultados"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "search": "Buscar",
+    "warcraft": "Warcraft",
+    "starcraft": "Starcraft",
+    "diablo": "Diablo",
+    "overwatch": "Overwatch"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "select": "Seleccionar",
+    "all": "Todos",
+    "none": "Ninguno",
+    "more": "Más",
+    "less": "Menos",
+    "back": "Atrás",
+    "continue": "Continuar",
+    "finish": "Finalizar",
+    "reset": "Restablecer",
+    "apply": "Aplicar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "sortBy": "Ordenar por",
+    "orderBy": "Ordenar por",
+    "ascending": "Ascendente",
+    "descending": "Descendente",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "veryEasy": "Muy Fácil",
+    "veryhard": "Muy Difícil",
+    "information": "Información",
+    "shop": "Tienda",
+    "download": "Descargar Battle.net",
+    "about": "Acerca de"
+  },
+  "language": {
+    "select": "Seleccionar idioma",
+    "english": "Inglés",
+    "spanish": "Español"
+  },
+  "tooltips": {
+    "searchHero": "Buscar un héroe por nombre",
+    "filterByRole": "Filtrar héroes por rol",
+    "filterByUniverse": "Filtrar héroes por universo",
+    "clearAllFilters": "Limpiar todos los filtros activos",
+    "viewHeroDetails": "Ver información detallada del héroe",
+    "closeDetails": "Cerrar detalles del héroe",
+    "nextPage": "Ir a la página siguiente",
+    "previousPage": "Ir a la página anterior",
+    "firstPage": "Ir a la primera página",
+    "lastPage": "Ir a la última página",
+    "noHeroesFound": "No se encontraron héroes en el universo {{universe}}",
+    "noHeroesFoundDescription": "Por favor vuelve más tarde o explora otros universos.",
+    "heroesTitle": "Héroes de {{universe}}",
+    "heroesSubtitle": "Descubre campeones legendarios del universo {{universe}}",
+    "viewDetails": "Ver Detalles",
+    "firstAppeared": "Primera aparición:",
+    "difficulty": "Dificultad",
+    "damageType": "Tipo de Daño",
+    "range": "Alcance",
+    "health": "Salud",
+    "mobility": "Movilidad",
+    "description": "Descripción",
+    "firstAppearance": "Primera Aparición"
+  },
+  "ui": {
+    "viewDetails": "Ver Detalles",
+    "firstAppeared ": "Primera aparición",
+    "noHeroesFound": "No se encontraron héroes en el universo {{universe}}",
+    "noHeroesFoundDescription": "Por favor vuelve más tarde o explora otros universos.",
+    "heroesTitle": "Héroes de {{universe}}",
+    "heroesSubtitle": "Descubre campeones legendarios del universo {{universe}}",
+    "description": "Descripción de {{heroName}}"
+  },
+  "heroData": {
+    "note": "Los nombres, descripciones y atributos de los héroes se cargan desde heroes-es.json"
+  },
+  "footer": {
+    "brand": "Héroes del Nexus",
+    "description": "Únete a la batalla épica donde los héroes legendarios de los universos de Blizzard se enfrentan en el campo de batalla definitivo.",
+    "universes": "Universos",
+    "community": "Comunidad",
+    "resources": "Recursos",
+    "searchHeroes": "Buscar Héroes",
+    "guides": "Guías",
+    "builds": "Builds",
+    "tierLists": "Tier Lists",
+    "patches": "Parches",
+    "followUs": "Síguenos",
+    "copyright": "Todos los derechos reservados.",
+    "disclaimer": "Heroes of the Storm es una marca registrada de Blizzard Entertainment, Inc.",
+    "terms": "Términos de Servicio",
+    "privacy": "Política de Privacidad",
+    "cookies": "Cookies"
+  },
+  "difficulty": {
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "very Hard": "Muy Difícil"
+  }
+}
