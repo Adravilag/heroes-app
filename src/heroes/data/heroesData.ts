@@ -1132,7 +1132,7 @@ function generateHeroesFromAssets(): HeroData[] {
       role: heroInfo.role,
       universe: heroInfo.universe,
       firstAppearance: heroInfo.firstAppearance,
-      image: `/src/assets/heroportraits/${fileName}`,
+      image: `/assets/heroportraits/${fileName}`,
       secondImage: [], // Puede expandirse later si tenemos skins alternativos
       difficulty: heroInfo.difficulty,
       damageType: heroInfo.damageType,

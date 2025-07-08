@@ -1,6 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from '../../auth/hooks';
 import { useLanguage, ModernLanguageSelector } from '../../i18n/i18n';
+import { buildRoutePath } from '../../utils/pathUtils';
 import './css/ModernNavbar.css';
 
 const ModernNavbar = () => {
@@ -9,7 +10,7 @@ const ModernNavbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/login", {
+    navigate(buildRoutePath("/login"), {
       replace: true,
     });
     logout();
@@ -20,7 +21,7 @@ const ModernNavbar = () => {
       <div className="modern-navbar-container">
         {/* Logo/Brand */}
         <div className="modern-navbar-brand">
-          <Link to="/" className="brand-logo">
+          <Link to={buildRoutePath("/")} className="brand-logo">
             <div className="blizzard-logo">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M12 2L2 7v10l10 5 10-5V7l-10-5z"/>
@@ -35,7 +36,7 @@ const ModernNavbar = () => {
         {/* Navigation Menu */}
         <div className="modern-navbar-menu">
           <NavLink
-            to="/warcraft"
+            to={buildRoutePath("/warcraft")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-text">{t('navigation.warcraft')}</span>
@@ -43,7 +44,7 @@ const ModernNavbar = () => {
           </NavLink>
 
           <NavLink
-            to="/diablo"
+            to={buildRoutePath("/diablo")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-text">{t('navigation.diablo')}</span>
@@ -51,7 +52,7 @@ const ModernNavbar = () => {
           </NavLink>
 
           <NavLink
-            to="/overwatch"
+            to={buildRoutePath("/overwatch")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-text">{t('navigation.overwatch')}</span>
@@ -59,7 +60,7 @@ const ModernNavbar = () => {
           </NavLink>
 
           <NavLink
-            to="/starcraft"
+            to={buildRoutePath("/starcraft")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-text">{t('navigation.starcraft')}</span>
@@ -67,7 +68,7 @@ const ModernNavbar = () => {
           </NavLink>
 
           <NavLink
-            to="/search"
+            to={buildRoutePath("/search")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
           >
             <span className="nav-text">{t('navigation.search')}</span>

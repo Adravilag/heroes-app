@@ -136,7 +136,84 @@ npm run lint
 | `npm run build` | 📦 Build optimizado para producción | Deploy |
 | `npm run lint` | 🔍 Análisis de código con ESLint | Control de calidad |
 | `npm run preview` | 👀 Preview del build de producción | Testing pre-deploy |
-| `npm run type-check` | 🔍 Verificación de tipos TypeScript | Validación |
+| `npm run deploy` | 🌐 Despliega a GitHub Pages | Deploy manual |
+
+## 🌐 Despliegue en GitHub Pages
+
+### 🚀 Configuración Automática (Recomendada)
+
+El proyecto está configurado para **despliegue automático** usando GitHub Actions:
+
+```bash
+# 1. Subir código a GitHub
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push origin main
+
+# 2. El despliegue se activa automáticamente
+# ✅ GitHub Actions construye y despliega la app
+```
+
+### ⚙️ Configuración de GitHub Pages
+
+1. **Ve a tu repositorio en GitHub**
+2. **Settings** → **Pages**
+3. **Source**: Selecciona "GitHub Actions"
+4. **¡Listo!** El despliegue se activará en cada push
+
+### 🔗 URL de la Aplicación
+
+Una vez desplegada, tu app estará disponible en:
+```
+https://tu-usuario.github.io/heroes-app/
+```
+
+### 📝 Configuración Personalizada
+
+**Antes del primer despliegue**, actualiza estas configuraciones:
+
+#### 1. En `package.json`:
+```json
+{
+  "homepage": "https://TU-USUARIO-GITHUB.github.io/heroes-app/"
+}
+```
+
+#### 2. En `vite.config.ts`:
+```typescript
+export default defineConfig({
+  base: '/heroes-app/'  // ✅ Ya configurado
+})
+```
+
+### 🛠️ Despliegue Manual (Alternativo)
+
+Si prefieres desplegar manualmente:
+
+```bash
+# Construir y desplegar
+npm run deploy
+
+# O paso a paso:
+npm run build
+npx gh-pages -d dist
+```
+
+### 🔍 Verificación del Despliegue
+
+- ✅ **GitHub Actions**: Ve a la pestaña "Actions" en tu repo
+- ✅ **Estado**: Verifica que el workflow "Deploy to GitHub Pages" esté en verde
+- ✅ **URL**: Accede a tu aplicación en la URL de GitHub Pages
+
+### ⚠️ Troubleshooting
+
+**Problema: La página no carga**
+- Verifica que el `base` en `vite.config.ts` coincida con el nombre del repo
+- Asegúrate de que GitHub Pages esté habilitado en Settings
+
+**Problema: Rutas 404**
+- GitHub Pages no soporta SPA routing por defecto
+- El proyecto incluye configuración para solucionar esto
 
 ## 🎯 Características Técnicas Avanzadas
 

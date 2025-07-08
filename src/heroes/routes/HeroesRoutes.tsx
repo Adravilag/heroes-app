@@ -1,6 +1,7 @@
 import { ModernNavbar, Footer } from "../../ui";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { WarcraftPage, StarcraftPage, DiabloPage, SearchPage, HeroPage, OverwatchPage } from "../pages";
+import { buildRoutePath } from "../../utils/pathUtils";
 
 const HeroesRoutes = () => {
   return (
@@ -15,7 +16,7 @@ const HeroesRoutes = () => {
           <Route path="search" element={<SearchPage />} />
           <Route path="hero" element={<HeroPage />} />
           <Route path="hero/:id" element={<HeroPage />} />
-          <Route path="/" element={<Navigate to="/warcraft" replace />} />
+          <Route path="/" element={<Navigate to={buildRoutePath("/warcraft")} replace />} />
         </Routes>
       </div>
       <Footer />

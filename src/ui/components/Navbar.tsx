@@ -1,6 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from '../../auth/hooks';
 import { useLanguage, LanguageSelector } from '../../i18n/i18n';
+import { buildRoutePath } from '../../utils/pathUtils';
 
 const Navbar = () => {
 
@@ -10,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate("/login", {
+    navigate(buildRoutePath("/login"), {
       replace: true,
     });
     logout();
@@ -19,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className="hots-navbar">
       <div className="hots-container">
-        <Link className="hots-brand" to="/">
+        <Link className="hots-brand" to={buildRoutePath("/")}>
           {t('heroes.title')}
         </Link>
 
@@ -29,7 +30,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hots-nav-link ${isActive ? "active" : ""}`
               }
-              to="/warcraft"
+              to={buildRoutePath("/warcraft")}
             >
               {t('navigation.warcraft')}
             </NavLink>
@@ -39,7 +40,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hots-nav-link ${isActive ? "active" : ""}`
               }
-              to="/starcraft"
+              to={buildRoutePath("/starcraft")}
             >
               {t('navigation.starcraft')}
             </NavLink>
@@ -49,7 +50,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hots-nav-link ${isActive ? "active" : ""}`
               }
-              to="/diablo"
+              to={buildRoutePath("/diablo")}
             >
               {t('navigation.diablo')}
             </NavLink>
@@ -59,7 +60,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hots-nav-link ${isActive ? "active" : ""}`
               }
-              to="/overwatch"
+              to={buildRoutePath("/overwatch")}
             >
               {t('navigation.overwatch')}
             </NavLink>
@@ -70,7 +71,7 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `hots-nav-link ${isActive ? "active" : ""}`
               }
-              to="/search"
+              to={buildRoutePath("/search")}
             >
               {t('navigation.search')}
             </NavLink>
