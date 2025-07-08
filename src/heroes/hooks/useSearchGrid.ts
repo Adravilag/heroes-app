@@ -118,7 +118,7 @@ export const useSearchGrid = ({
     if (enableInfiniteScroll) {
       resetInfiniteScroll();
     }
-  }, [filteredHeroes.length, enableInfiniteScroll, resetInfiniteScroll]);
+  }, [filteredHeroes, enableInfiniteScroll, resetInfiniteScroll]);
 
   // Keyboard navigation
   const keyboardNav = useKeyboardNavigation({
