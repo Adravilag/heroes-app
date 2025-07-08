@@ -41,10 +41,14 @@ git push -u origin main
 
 ### 3. Configurar GitHub Pages
 
-1. **Ve a tu repositorio en GitHub**
+1. **Ve a tu repositorio en GitHub**: https://github.com/Adravilag/heroes-app
 2. **Settings** → **Pages** (en la sidebar izquierda)
 3. **Source**: Selecciona **"GitHub Actions"**
 4. **¡Guarda y listo!**
+
+**⚠️ IMPORTANTE**: Si no aparece la opción "GitHub Actions":
+- Asegúrate de que el repositorio sea público, o
+- Que tengas una cuenta de GitHub Pro/Team para repositorios privados
 
 ### 4. Personalizar la Configuración
 
@@ -52,20 +56,16 @@ git push -u origin main
 
 #### En `package.json` (línea 6):
 ```json
-"homepage": "https://TU-USUARIO-GITHUB.github.io/heroes-app/"
-```
-
-#### Ejemplo:
-Si tu usuario de GitHub es `adravilag`, cambia:
-```json
 "homepage": "https://adravilag.github.io/heroes-app/"
 ```
+
+**✅ Ya está configurado correctamente**
 
 ### 5. Verificar el Despliegue
 
 1. **Ve a la pestaña "Actions"** en tu repositorio
 2. **Espera** a que el workflow termine (círculo verde ✅)
-3. **Accede** a tu app en: `https://tu-usuario.github.io/heroes-app/`
+3. **Accede** a tu app en: `https://adravilag.github.io/heroes-app/`
 
 ### 6. Actualizaciones Futuras
 

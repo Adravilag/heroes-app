@@ -10,6 +10,15 @@ if (-not (Test-Path ".git")) {
     git init
 }
 
+# Construir la aplicación
+Write-Host "🔨 Construyendo la aplicación..." -ForegroundColor Yellow
+npm run build
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "❌ Error en el build. Abortando despliegue." -ForegroundColor Red
+    exit 1
+}
+
 # Verificar si hay cambios para commitear
 $gitStatus = git status --porcelain
 if ($gitStatus) {
@@ -37,12 +46,13 @@ try {
     git remote add origin $repoUrl
 }
 
-# Subir a GitHub
+# Subir a GitHub (esto activará GitHub Actions)
 Write-Host "⬆️ Subiendo cambios a GitHub..." -ForegroundColor Yellow
 git push -u origin main
 
 Write-Host ""
-Write-Host "✅ ¡Despliegue iniciado!" -ForegroundColor Green
+Write-Host "✅ ¡Cambios subidos a GitHub!" -ForegroundColor Green
+Write-Host "🔄 GitHub Actions se está encargando del despliegue automáticamente" -ForegroundColor Cyan
 Write-Host "🔍 Ve a GitHub → tu repositorio → pestaña 'Actions' para ver el progreso" -ForegroundColor Cyan
 Write-Host "🌐 Una vez completado, tu app estará en: https://tu-usuario.github.io/heroes-app/" -ForegroundColor Cyan
 Write-Host ""

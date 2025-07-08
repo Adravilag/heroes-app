@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "description": "Una aplicación web inmersiva inspirada en Heroes of the Storm para explorar el universo de héroes de Blizzard Entertainment",
   "type": "module",
-  "homepage": "https://tu-usuario.github.io/heroes-app/",
+  "homepage": "https://adravilag.github.io/heroes-app/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tu-usuario/heroes-app.git"
+    "url": "git+https://github.com/Adravilag/heroes-app.git"
   },
   "keywords": [
     "react",
@@ -19,17 +19,18 @@
     "spa",
     "i18n"
   ],
-  "author": "Tu Nombre",
+  "author": "Adravilag",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tu-usuario/heroes-app/issues"
+    "url": "https://github.com/Adravilag/heroes-app/issues"
   },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "deploy-win": "npm run build && gh-pages -d dist --dotfiles --git \"C:\\Program Files\\Git\\bin\\git.exe\""
   },
   "dependencies": {
     "i18next": "^25.3.1",
