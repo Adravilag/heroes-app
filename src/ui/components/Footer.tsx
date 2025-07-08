@@ -1,5 +1,7 @@
 import './css/Footer.css';
 import { useLanguage } from '../../i18n/i18n';
+import { Link } from 'react-router-dom';
+import { buildRoutePath } from '../../utils/pathUtils';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -28,17 +30,17 @@ const Footer = () => {
               <div className="footer-column">
                 <h4>{t('footer.universes')}</h4>
                 <ul>
-                  <li><a href="/warcraft">{t('navigation.warcraft')}</a></li>
-                  <li><a href="/starcraft">{t('navigation.starcraft')}</a></li>
-                  <li><a href="/diablo">{t('navigation.diablo')}</a></li>
-                  <li><a href="/overwatch">{t('navigation.overwatch')}</a></li>
+                  <li><Link to={buildRoutePath("/warcraft")}>{t('navigation.warcraft')}</Link></li>
+                  <li><Link to={buildRoutePath("/starcraft")}>{t('navigation.starcraft')}</Link></li>
+                  <li><Link to={buildRoutePath("/diablo")}>{t('navigation.diablo')}</Link></li>
+                  <li><Link to={buildRoutePath("/overwatch")}>{t('navigation.overwatch')}</Link></li>
                 </ul>
               </div>
               
               <div className="footer-column">
                 <h4>{t('footer.community')}</h4>
                 <ul>
-                  <li><a href="/search">{t('footer.searchHeroes')}</a></li>
+                  <li><Link to={buildRoutePath("/search")}>{t('footer.searchHeroes')}</Link></li>
                   <li><a href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
                   <li><a href="#" target="_blank" rel="noopener noreferrer">Reddit</a></li>
                   <li><a href="#" target="_blank" rel="noopener noreferrer">Twitch</a></li>
