@@ -48,6 +48,13 @@ Si aparece un error 404 al acceder directamente a rutas como `/heroes-app/overwa
 2. **Verificar el script SPA** en `index.html`
 3. **Verificar la configuración** de `pathSegmentsToKeep = 1` en `404.html`
 
+### Prefijo Duplicado en URLs (RESUELTO)
+Si las URLs aparecen como `/heroes-app/heroes-app/diablo` en lugar de `/heroes-app/diablo`:
+
+1. **Causa**: `buildRoutePath` añadía el prefijo base cuando React Router ya lo maneja con `basename`
+2. **Solución**: Simplificado `buildRoutePath` para devolver solo rutas relativas
+3. **Resultado**: React Router se encarga automáticamente del prefijo con `basename`
+
 ### Recursos Estáticos No Cargan
 Si las imágenes o estilos no cargan:
 
@@ -60,7 +67,7 @@ Si la navegación interna no funciona:
 
 1. **Verificar `AppRouter.tsx`** - debe usar `basename="/heroes-app"`
 2. **Verificar componentes de navegación** - deben usar rutas relativas
-3. **Verificar hooks de navegación** - deben usar `buildRoutePath()`
+3. **Verificar hooks de navegación** - deben usar rutas relativas (sin prefijo)
 
 ## Comandos de Depuración
 
