@@ -1,3 +1,5 @@
+import { buildUrl } from '../../utils/pathUtils';
+
 export interface HeroData {
   id: number;
   key: string;
@@ -1132,7 +1134,7 @@ function generateHeroesFromAssets(): HeroData[] {
       role: heroInfo.role,
       universe: heroInfo.universe,
       firstAppearance: heroInfo.firstAppearance,
-      image: `/assets/heroportraits/${fileName}`,
+      image: buildUrl(`assets/heroportraits/${fileName}`),
       secondImage: [], // Puede expandirse later si tenemos skins alternativos
       difficulty: heroInfo.difficulty,
       damageType: heroInfo.damageType,

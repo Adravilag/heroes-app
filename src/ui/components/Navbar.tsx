@@ -11,7 +11,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate(buildRoutePath("/login"), {
+    navigate("/login", {
       replace: true,
     });
     logout();

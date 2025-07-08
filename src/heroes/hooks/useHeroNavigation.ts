@@ -1,6 +1,5 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { buildRoutePath } from '../../utils/pathUtils';
 import type { TranslatedHero } from './useTranslatedHeroes';
 
 interface UseHeroNavigationProps {
@@ -27,7 +26,7 @@ export const useHeroNavigation = ({
   const handleViewDetails = useCallback(() => {
     if (selectedHero) {
       setSelectedHero(null);
-      navigate(buildRoutePath(`/hero/${selectedHero.id}`));
+      navigate(`/hero/${selectedHero.id}`);
     }
   }, [selectedHero, navigate, setSelectedHero]);
 

@@ -8,6 +8,7 @@ import {
 } from "../../helpers";
 import type { TranslatedHero } from "../../hooks/useTranslatedHeroes";
 import { useLanguage } from "../../../i18n/i18n";
+import { buildUrl } from "../../../utils/pathUtils";
 import { Link } from "react-router-dom";
 
 interface HeroCardProps {
@@ -35,7 +36,7 @@ const HeroCard = ({ hero, setSelectedHero }: HeroCardProps) => {
           alt={hero.name}
           className="hero-card-img transform transition-all p-2 duration-700 group-hover:scale-110 group-hover:rotate-1 filter group-hover:brightness-110"
           onError={(e) => {
-            (e.target as HTMLImageElement).src = "/placeholder-hero.jpg";
+            (e.target as HTMLImageElement).src = buildUrl("placeholder-hero.svg");
           }}
         />
         <div className="hero-card-overlay transition-all duration-500 group-hover:bg-gradient-to-t group-hover:from-black/70 group-hover:to-transparent">

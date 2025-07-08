@@ -12,6 +12,7 @@ import {
 } from "../helpers";
 import { useLanguage } from "../../i18n/i18n";
 import { useHeroValueTranslations } from "../hooks/useHeroValueTranslations";
+import { buildUrl } from "../../utils/pathUtils";
 
 const HeroPage = () => {
   // Scroll automático al top cuando se navega a esta página
@@ -118,7 +119,7 @@ const HeroPage = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src =
-                      "/placeholder-hero.jpg";
+                      buildUrl("placeholder-hero.svg");
                   }}
                 />
 

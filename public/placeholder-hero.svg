@@ -1,0 +1,42 @@
+<!-- Placeholder SVG para héroes -->
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo degradado -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00a8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0078d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <rect width="400" height="400" fill="url(#bgGradient)" />
+  
+  <!-- Icono de héroe -->
+  <g transform="translate(200, 200)">
+    <!-- Escudo -->
+    <path d="M-60,-80 L60,-80 L60,0 L40,60 L20,80 L-20,80 L-40,60 L-60,0 Z" 
+          fill="url(#iconGradient)" stroke="#ffffff" stroke-width="2" opacity="0.8"/>
+    
+    <!-- Espada -->
+    <path d="M-5,-60 L5,-60 L8,-20 L15,-15 L15,-10 L8,-5 L-8,-5 L-15,-10 L-15,-15 L-8,-20 Z" 
+          fill="#ffffff" opacity="0.6"/>
+    
+    <!-- Gema central -->
+    <circle cx="0" cy="-30" r="8" fill="#00ffff" opacity="0.8"/>
+  </g>
+  
+  <!-- Texto -->
+  <text x="200" y="320" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="24" font-weight="bold" fill="#ffffff" opacity="0.7">
+    HERO
+  </text>
+  <text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" 
+        font-size="16" fill="#00a8ff" opacity="0.8">
+    IMAGE NOT FOUND
+  </text>
+</svg>

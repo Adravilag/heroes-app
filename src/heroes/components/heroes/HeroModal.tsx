@@ -1,5 +1,6 @@
 import type { Hero } from "../../types/Hero";
 import { useLanguage } from "../../../i18n/i18n";
+import { buildUrl } from "../../../utils/pathUtils";
 
 const HeroModal = ({
   selectedHero,
@@ -50,7 +51,7 @@ const HeroModal = ({
                       style={{ aspectRatio: "1/1", objectFit: "cover" }}
                       onError={(e) => {
                         (e.target as HTMLImageElement).src =
-                          "/placeholder-hero.jpg";
+                          buildUrl("placeholder-hero.svg");
                       }}
                     />
                   </div>

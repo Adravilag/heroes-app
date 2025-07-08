@@ -1,5 +1,14 @@
 # Guía de Despliegue en GitHub Pages
 
+## 🎯 Estado Actual del Proyecto
+
+✅ **Proyecto listo para despliegue**
+- Todas las rutas corregidas para usar `/heroes-app/`
+- Imágenes movidas a `public/assets/heroportraits/`
+- Navegación configurada con helpers de rutas
+- Soporte completo para SPA en GitHub Pages
+- Build exitoso sin errores
+
 ## 🚀 Pasos para Desplegar tu Heroes App
 
 ### 1. Preparar el Repositorio de GitHub
@@ -69,15 +78,38 @@ git push
 # GitHub Actions desplegará automáticamente
 ```
 
+## ✅ Verificación del Despliegue
+
+### Desarrollo Local
+```bash
+# Iniciar servidor de desarrollo
+npm run dev
+
+# Deberías ver: http://localhost:5174/heroes-app/
+# ✅ Esto confirma que el prefijo está configurado correctamente
+```
+
+### Verificar que las Rutas Funcionen
+1. **Imágenes de héroes**: Deben cargarse desde `/heroes-app/assets/heroportraits/`
+2. **Navegación**: Todos los links usan el prefijo `/heroes-app/`
+3. **Rutas SPA**: `/heroes-app/warcraft`, `/heroes-app/diablo`, etc.
+
 ## 🔧 Troubleshooting
 
 ### La página no carga
 - Verifica el `homepage` en `package.json`
 - Asegúrate de que el nombre del repo coincida con la URL
+- Confirma que el servidor local muestre `/heroes-app/` en la URL
 
 ### Error 404 en las rutas
 - Ya está configurado el manejo de SPA en `404.html`
 - Si persiste, verifica que GitHub Pages esté habilitado
+- Comprueba que el prefijo `/heroes-app/` esté en todas las rutas
+
+### Las imágenes no cargan
+- ✅ **YA CORREGIDO**: Imágenes movidas a `public/assets/heroportraits/`
+- ✅ **YA CORREGIDO**: Helper `getHeroImageUrl()` usa rutas correctas
+- ✅ **YA CORREGIDO**: Todas las rutas usan el helper `buildUrl()`
 
 ### El build falla
 - Revisa los logs en la pestaña "Actions"

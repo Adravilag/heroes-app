@@ -1,4 +1,5 @@
 import type { TranslatedHero } from "../../hooks/useTranslatedHeroes";
+import { buildUrl } from "../../../utils/pathUtils";
 
 type SearchGridProps = {
   filteredHeroes: TranslatedHero[];
@@ -52,7 +53,7 @@ const SearchGrid = ({
                     }}
                     onError={(e) => {
                       (e.target as HTMLImageElement).src =
-                        "/placeholder-hero.jpg";
+                        buildUrl("placeholder-hero.svg");
                     }}
                   />
 

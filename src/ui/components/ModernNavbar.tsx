@@ -10,7 +10,7 @@ const ModernNavbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate(buildRoutePath("/login"), {
+    navigate("/login", {
       replace: true,
     });
     logout();
