@@ -20,15 +20,11 @@ export const buildUrl = (path: string): string => {
 };
 
 // Helper específico para rutas de navegación
+// Como React Router ya maneja el basename, siempre devolvemos rutas relativas
 export const buildRoutePath = (route: string): string => {
-  const basePath = getBasePath();
+  // Limpiar la ruta para asegurar que comience con /
   const cleanRoute = route.startsWith('/') ? route : `/${route}`;
   
-  // Si basePath es "/" (desarrollo), devolver la ruta tal como está
-  if (basePath === '/') {
-    return cleanRoute;
-  }
-  
-  // En producción con prefijo
-  return `${basePath.slice(0, -1)}${cleanRoute}`;
+  // Devolver la ruta tal como está - React Router se encarga del basename
+  return cleanRoute;
 };
