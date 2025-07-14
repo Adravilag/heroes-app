@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { LanguageContext } from './LanguageContext';
 
@@ -11,6 +11,7 @@ const LANGUAGE_STORAGE_KEY = 'heroes-app-language';
 
 export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const { t, i18n } = useTranslation();
+  const [loading, setLoading] = useState(true);
 
   const availableLanguages = [
     { code: 'en', name: 'English', nativeName: 'English' },
@@ -21,7 +22,9 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   useEffect(() => {
     const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
     if (savedLanguage && availableLanguages.some(lang => lang.code === savedLanguage)) {
-      i18n.changeLanguage(savedLanguage);
+      i18n.changeLanguage(savedLanguage).then(() => setLoading(false));
+    } else {
+      setLoading(false);
     }
   }, [i18n]);
 
@@ -48,6 +51,10 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     t: tWithInterpolation,
     availableLanguages
   };
+
+  if (loading) {
+    return null; // O un loader/spinner si prefieres
+  }
 
   return (
     <LanguageContext.Provider value={value}>

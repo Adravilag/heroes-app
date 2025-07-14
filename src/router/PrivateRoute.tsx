@@ -13,7 +13,6 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
 
   if (currentPath !== "/") {
     const lastVisitedPath = `${currentPath}${currentSearch}`;
-
     localStorage.setItem("lastVisitedPath", lastVisitedPath);
   }
 

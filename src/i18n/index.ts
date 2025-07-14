@@ -23,13 +23,14 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // idioma por defecto
+    lng: (() => {
+      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('heroes-app-language') : null;
+      return saved && ['en', 'es'].includes(saved) ? saved : 'en';
+    })(), // idioma inicial desde localStorage si existe
     fallbackLng: 'en',
-    
     interpolation: {
       escapeValue: false
     },
-    
     detection: {
       order: ['localStorage', 'navigator', 'htmlTag'],
       caches: ['localStorage'],
