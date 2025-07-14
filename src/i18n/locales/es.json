@@ -208,7 +208,7 @@
   },
   "ui": {
     "viewDetails": "Ver Detalles",
-    "firstAppeared ": "Primera aparición",
+    "firstAppeared": "Primera aparición:",
     "noHeroesFound": "No se encontraron héroes en el universo {{universe}}",
     "noHeroesFoundDescription": "Por favor vuelve más tarde o explora otros universos.",
     "heroesTitle": "Héroes de {{universe}}",

@@ -2,18 +2,28 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from '../../auth/hooks';
 import { useLanguage, ModernLanguageSelector } from '../../i18n/i18n';
 import { buildRoutePath } from '../../utils/pathUtils';
+import { useState } from 'react';
 import './css/ModernNavbar.css';
 
 const ModernNavbar = () => {
   const { user, logout } = useAuth();
   const { t } = useLanguage();
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
     navigate("/login", {
       replace: true,
     });
     logout();
+  }
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   }
 
   return (
@@ -34,10 +44,11 @@ const ModernNavbar = () => {
         </div>
 
         {/* Navigation Menu */}
-        <div className="modern-navbar-menu">
+        <div className={`modern-navbar-menu ${isMenuOpen ? 'open' : ''}`}>
           <NavLink
             to={buildRoutePath("/warcraft")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             <span className="nav-text">{t('navigation.warcraft')}</span>
             <div className="nav-indicator"></div>
@@ -46,6 +57,7 @@ const ModernNavbar = () => {
           <NavLink
             to={buildRoutePath("/diablo")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             <span className="nav-text">{t('navigation.diablo')}</span>
             <div className="nav-indicator"></div>
@@ -54,6 +66,7 @@ const ModernNavbar = () => {
           <NavLink
             to={buildRoutePath("/overwatch")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             <span className="nav-text">{t('navigation.overwatch')}</span>
             <div className="nav-indicator"></div>
@@ -62,6 +75,7 @@ const ModernNavbar = () => {
           <NavLink
             to={buildRoutePath("/starcraft")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             <span className="nav-text">{t('navigation.starcraft')}</span>
             <div className="nav-indicator"></div>
@@ -70,11 +84,23 @@ const ModernNavbar = () => {
           <NavLink
             to={buildRoutePath("/search")}
             className={({ isActive }) => `modern-nav-item ${isActive ? 'active' : ''}`}
+            onClick={closeMenu}
           >
             <span className="nav-text">{t('navigation.search')}</span>
             <div className="nav-indicator"></div>
           </NavLink>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="mobile-menu-button"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
+        </button>
 
         {/* Right section with user info */}
         <div className="modern-navbar-actions">

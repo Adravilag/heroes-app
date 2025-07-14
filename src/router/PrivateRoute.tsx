@@ -9,6 +9,14 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
   const { isAuthenticated } = useAuth();
   const location = useLocation();
 
+  const { pathname: currentPath, search: currentSearch } = location;
+
+  if (currentPath !== "/") {
+    const lastVisitedPath = `${currentPath}${currentSearch}`;
+
+    localStorage.setItem("lastVisitedPath", lastVisitedPath);
+  }
+
   // Si no está autenticado, redirigir a login guardando la ubicación actual
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: location }} replace />;

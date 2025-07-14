@@ -3,6 +3,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { WarcraftPage, StarcraftPage, DiabloPage, SearchPage, HeroPage, OverwatchPage } from "../pages";
 
 const HeroesRoutes = () => {
+
+  // En el caso de que haya visitdo la última ruta, se redirige a Warcraft por defecto
+  const lastVisitedPath = localStorage.getItem("lastVisitedPath") || "/warcraft";
+
+  console.log(`Redirigiendo a la última ruta visitada: ${lastVisitedPath}`);
+  
+
   return (
     <>
       <ModernNavbar />
@@ -15,7 +22,7 @@ const HeroesRoutes = () => {
           <Route path="search" element={<SearchPage />} />
           <Route path="hero" element={<HeroPage />} />
           <Route path="hero/:id" element={<HeroPage />} />
-          <Route path="/" element={<Navigate to="/warcraft" replace />} />
+          <Route path="/" element={<Navigate to={lastVisitedPath} replace />} />
         </Routes>
       </div>
       <Footer />
