@@ -1,10 +1,10 @@
 {
   "auth": {
     "login": {
-      "title": "Acceso al Nexus",
+      "title": "Acceso al Nexo",
       "username": "Nombre de usuario",
       "password": "Contraseña",
-      "loginButton": "Entrar al Nexus",
+      "loginButton": "Entrar al Nexo",
       "invalidCredentials": "Nombre de usuario o contraseña incorrectos",
       "required": "Este campo es requerido",
       "welcome": "Bienvenido al campo de batalla",
@@ -13,7 +13,7 @@
     "logout": "Cerrar sesión"
   },
   "heroes": {
-    "title": "Héroes del Nexus",
+    "title": "Heroes of the Nexus",
     "search": "Buscar héroe...",
     "searchPlaceholder": "Buscar héroes...",
     "noResults": "No se encontraron héroes",

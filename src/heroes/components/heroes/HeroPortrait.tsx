@@ -10,6 +10,7 @@ import type { TranslatedHero } from "../../hooks/useTranslatedHeroes";
 import { useLanguage } from "../../../i18n/i18n";
 import { buildUrl } from "../../../utils/pathUtils";
 import { Link } from "react-router-dom";
+import "./css/HeroPortrait.css";
 
 interface HeroCardProps {
   hero: TranslatedHero;

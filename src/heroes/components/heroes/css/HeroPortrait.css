@@ -1,0 +1,190 @@
+.hero-card {
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.95) 0%,
+    rgba(30, 41, 59, 0.9) 100%
+  );
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.hero-card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: 20px; /* Evitar que cubra la parte inferior */
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(59, 130, 246, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent
+  );
+  clip-path: polygon(
+    50% 0%,
+    93.3% 25%,
+    93.3% 75%,
+    50% 100%,
+    6.7% 75%,
+    6.7% 25%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-card:hover {
+  transform: translateY(-2px) scale(1.001);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 50px rgba(59, 130, 246, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: rgba(59, 130, 246, 0.7);
+}
+
+.hero-card-img-container {
+  overflow: hidden;
+  position: relative;
+  border: 3px solid rgba(59, 130, 246, 0.4);
+  clip-path: polygon(
+    50% 0%,
+    93.3% 25%,
+    93.3% 75%,
+    50% 100%,
+    6.7% 75%,
+    6.7% 25%
+  );
+  /* centrar contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  transition: all 0.4s ease;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-card-body {
+  padding: 1.5rem;
+  text-align: left;
+  position: relative;
+}
+
+.hero-card-title {
+  font-family: "Orbitron", monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--hots-light);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-card-role {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.95),
+    rgba(139, 92, 246, 0.95)
+  );
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-card-role::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.hero-card:hover .hero-card-role::before {
+  left: 100%;
+}
+
+.hero-card-universe {
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  color: var(--hots-cyan);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  color: var(--hots-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero-card-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-card-stat {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.hero-card-stat:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.hero-card-stat-icon {
+  font-size: 1.2rem;
+}
+
+.hero-card-stat-text {
+  font-size: 0.75rem;
+  color: var(--hots-gray);
+  font-weight: 500;
+}
+
+.hero-card-appearance {
+  font-size: 0.8rem;
+  color: var(--hots-gray);
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}

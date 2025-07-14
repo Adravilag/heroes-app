@@ -13,6 +13,7 @@ import {
 import { useLanguage } from "../../i18n/i18n";
 import { useHeroValueTranslations } from "../hooks/useHeroValueTranslations";
 import { buildUrl } from "../../utils/pathUtils";
+import "./css/HeroPage.css"
 
 const HeroPage = () => {
   // Scroll automático al top cuando se navega a esta página
